@@ -24,4 +24,31 @@ public class MainPageTest extends BaseTest {
                 .clickServicesOnHeaderMenu()
                 .shouldBeOpened();
     }
+
+    @Test
+    public void clickDeliveryTest() {
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .clickDeliveryOnHeaderMenu()
+                .shouldBeOpened();
+    }
+
+    @Test
+    public void clickShopsTest() {
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .clickShopsOnHeaderMenu()
+                .shouldBeOpened();
+    }
+
+    @Test
+    public void clickAboutCompanyTest() {
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .clickAboutCompanyOnHeaderMenu()
+                .shouldBeOpened();
+    }
 }
