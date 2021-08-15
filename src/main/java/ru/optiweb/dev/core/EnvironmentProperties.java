@@ -1,10 +1,14 @@
 package ru.optiweb.dev.core;
 
-import ru.optiweb.dev.utils.PropertyReader;
+import ru.optiweb.dev.utils.PropertiesReader;
 
 public class EnvironmentProperties {
+    private static final PropertiesReader propertiesReader;
 
-    public static PropertyReader propertiesReader;
+
+    static {
+        propertiesReader = new PropertiesReader(PropertiesLoader.loadProperties("application.properties"));
+    }
 
     public static String getSiteBaseUrl() {
         return propertiesReader.get("baseSiteUrl");

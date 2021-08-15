@@ -8,6 +8,8 @@ import ru.optiweb.dev.pages.base.BasePage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static ru.optiweb.dev.core.EnvironmentProperties.getBaseAuthLogin;
+import static ru.optiweb.dev.core.EnvironmentProperties.getBaseAuthPassword;
 
 public class MainPage extends BasePage {
     private static final SelenideElement banner = $(By.xpath("//div[@class='content']"));
@@ -15,14 +17,10 @@ public class MainPage extends BasePage {
     @Override
     @Step("open Main page")
     public MainPage open() {
-//        Selenide.open("",
-//                "",
-//                getBaseAuthLogin(),
-//                getBaseAuthPassword());
         Selenide.open("",
                 "",
-                "kuchumova",
-                "wXKdeN");
+                getBaseAuthLogin(),
+                getBaseAuthPassword());
         return new MainPage();
     }
 

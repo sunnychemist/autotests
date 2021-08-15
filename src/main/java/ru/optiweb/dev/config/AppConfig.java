@@ -5,13 +5,13 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static ru.optiweb.dev.core.EnvironmentProperties.getSiteBaseUrl;
 
 public class AppConfig {
     public void start() {
         Configuration.startMaximized = true;
         Configuration.browser = "chrome";
-//        Configuration.baseUrl = getSiteBaseUrl();
-        Configuration.baseUrl = "http://www.3-5-5.b2b.dev.optiweb.ru";
+        Configuration.baseUrl = getSiteBaseUrl();
         Configuration.timeout = 6000;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
