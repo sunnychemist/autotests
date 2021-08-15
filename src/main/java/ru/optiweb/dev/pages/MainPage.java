@@ -24,7 +24,7 @@ public class MainPage extends BasePage {
         return new MainPage();
     }
 
-    @Step("Check Main Page was open")
+    @Step("check Main page was open")
     public MainPage shouldBeOpened() {
         banner.shouldBe(visible);
         return this;

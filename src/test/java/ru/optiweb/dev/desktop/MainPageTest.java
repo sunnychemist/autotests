@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import ru.optiweb.dev.base.BaseTest;
 import ru.optiweb.dev.pages.MainPage;
 
-import static com.codeborne.selenide.Selenide.*;
-
 public class MainPageTest extends BaseTest {
 
     @Test
@@ -23,7 +21,7 @@ public class MainPageTest extends BaseTest {
         new MainPage()
                 .open()
                 .shouldBeOpened()
-                .clickServices()
+                .clickServicesOnHeaderMenu()
                 .shouldBeOpened();
     }
 }

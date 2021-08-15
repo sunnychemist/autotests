@@ -11,23 +11,23 @@ import static com.codeborne.selenide.Selenide.$;
 import static ru.optiweb.dev.core.EnvironmentProperties.getBaseAuthLogin;
 import static ru.optiweb.dev.core.EnvironmentProperties.getBaseAuthPassword;
 
-public class ServicesPage extends BasePage {
+public class DeliveryPage extends BasePage {
     private static final SelenideElement title = $(By.xpath("//h1[@class='content__title']"));
 
     @Override
-    @Step("open Services page")
-    public ServicesPage open() {
+    @Step("open Delivery page")
+    public DeliveryPage open() {
         Selenide.open("",
                 "",
                 getBaseAuthLogin(),
                 getBaseAuthPassword());
-        return new ServicesPage();
+        return new DeliveryPage();
     }
 
 
-    @Step("check Services page was open")
-    public ServicesPage shouldBeOpened() {
-        title.shouldHave(exactText("Title"));
+    @Step("check Delivery page was open")
+    public DeliveryPage shouldBeOpened() {
+        title.shouldHave(exactText("Доставка и оплата"));
         return this;
     }
 }
