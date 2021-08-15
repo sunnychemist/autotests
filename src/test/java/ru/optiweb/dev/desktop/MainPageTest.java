@@ -10,12 +10,20 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPageTest extends BaseTest {
 
     @Test
-    public void baseTest() {
+    public void clickBannerTest() {
         new MainPage()
                 .open()
                 .shouldBeOpened()
                 .clickBanner()
                 .shouldBeOpened();
-        sleep(1000);
+    }
+
+    @Test
+    public void clickServicesTest() {
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .clickServices()
+                .shouldBeOpened();
     }
 }
