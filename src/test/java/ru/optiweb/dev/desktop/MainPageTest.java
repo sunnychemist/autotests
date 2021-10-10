@@ -18,4 +18,46 @@ public class MainPageTest extends BaseTest {
                 .shouldBeOpened();
         sleep(1000);
     }
+
+    @Test
+    public void checkDeliveryPage() {
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .selectDeliveryPages("Доставка")
+                .shouldBeOpened();
+        sleep(4000);
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .selectDeliveryPages("Оплата");
+//                .shouldBeOpened();
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .selectDeliveryPages("Порядок возврата");
+//                .shouldBeOpened();
+    }
+
+    @Test
+    public void checkAboutPage() {
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .selectAboutPages("О компании")
+                .shouldBeOpened();
+        sleep(4000);
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .selectAboutPages("Услуги");
+//                .shouldBeOpened();
+        sleep(4000);
+        new MainPage()
+                .open()
+                .shouldBeOpened()
+                .selectAboutPages("Контакты");
+//                .shouldBeOpened();
+        sleep(4000);
+    }
 }
