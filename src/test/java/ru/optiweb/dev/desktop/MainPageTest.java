@@ -1,9 +1,10 @@
 package ru.optiweb.dev.desktop;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import ru.optiweb.dev.base.BaseTest;
 import ru.optiweb.dev.pages.MainPage;
 
+import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class MainPageTest extends BaseTest {

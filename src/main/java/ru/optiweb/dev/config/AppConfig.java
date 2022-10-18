@@ -11,7 +11,7 @@ public class AppConfig {
         Configuration.startMaximized = true;
         Configuration.browser = "chrome";
 //        Configuration.baseUrl = getSiteBaseUrl();
-        Configuration.baseUrl = "http://www.3-6.b2b.dev.optiweb.ru";
+        Configuration.baseUrl = "http://www.3-6-4.b2b.dev.optiweb.ru";
         Configuration.timeout = 6000;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)

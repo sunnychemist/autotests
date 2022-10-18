@@ -27,7 +27,7 @@ public class MainPage extends BasePage {
 //                "",
 //                getBaseAuthLogin(),
 //                getBaseAuthPassword());
-        Selenide.open("",
+        Selenide.open("/",
                 "",
                 "kuchumova",
                 "wXKdeN");

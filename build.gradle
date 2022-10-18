@@ -26,15 +26,14 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    implementation 'junit:junit:4.13.1'
-    def junitVersion = '5.7.0'
+    def junitVersion = '5.8.2'
     def allureVersion = '2.13.9'
 
     implementation "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
     implementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
     implementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
     implementation "org.junit.platform:junit-platform-runner:1.5.2"
-    implementation group: 'com.codeborne', name: 'selenide', version: '5.23.0'
+    implementation group: 'com.codeborne', name: 'selenide', version: '6.2.1'
     implementation group: 'org.hamcrest', name: 'hamcrest', version: '2.2'
     implementation 'com.github.javafaker:javafaker:1.0.2'
     implementation 'io.qameta.allure:allure-selenide:2.13.9'
